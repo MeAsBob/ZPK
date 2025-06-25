@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - TodoAppv2</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/TodoAppv2.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <div class="column-apk">
+            <div class="logo-apk">
+                <a href="https://localhost:7262/">
+                    <img src="https://localhost:7262/uploads/logo.png" alt="Ikona" />
+                    <span class="wyrozniony-apk">Todo obiektowo</span>
+                </a>
+            </div>
+            <div class="buttons">
+                <a href="/stats/">Statystyki</a>
+            </div>
+        </div>
+    </header>
+
+    @RenderBody()
+
+    <footer class="footer-apk">
+        © 2025 Adrian Bolek & Michał Grabski
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

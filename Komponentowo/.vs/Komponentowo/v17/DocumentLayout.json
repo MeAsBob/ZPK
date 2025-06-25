@@ -1,0 +1,106 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\adrian\\Downloads\\Komponentowo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{30177DC7-1273-43D7-83FA-AFA569322424}|Komponentowo\\Komponentowo.csproj|c:\\users\\adrian\\downloads\\komponentowo\\komponentowo\\models\\taskitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30177DC7-1273-43D7-83FA-AFA569322424}|Komponentowo\\Komponentowo.csproj|solutionrelative:komponentowo\\models\\taskitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30177DC7-1273-43D7-83FA-AFA569322424}|Komponentowo\\Komponentowo.csproj|c:\\users\\adrian\\downloads\\komponentowo\\komponentowo\\components\\tasklistcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30177DC7-1273-43D7-83FA-AFA569322424}|Komponentowo\\Komponentowo.csproj|solutionrelative:komponentowo\\components\\tasklistcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30177DC7-1273-43D7-83FA-AFA569322424}|Komponentowo\\Komponentowo.csproj|c:\\users\\adrian\\downloads\\komponentowo\\komponentowo\\components\\statscomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30177DC7-1273-43D7-83FA-AFA569322424}|Komponentowo\\Komponentowo.csproj|solutionrelative:komponentowo\\components\\statscomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30177DC7-1273-43D7-83FA-AFA569322424}|Komponentowo\\Komponentowo.csproj|c:\\users\\adrian\\downloads\\komponentowo\\komponentowo\\components\\taskdetailcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30177DC7-1273-43D7-83FA-AFA569322424}|Komponentowo\\Komponentowo.csproj|solutionrelative:komponentowo\\components\\taskdetailcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TaskItem.cs",
+              "DocumentMoniker": "C:\\Users\\adrian\\Downloads\\Komponentowo\\Komponentowo\\Models\\TaskItem.cs",
+              "RelativeDocumentMoniker": "Komponentowo\\Models\\TaskItem.cs",
+              "ToolTip": "C:\\Users\\adrian\\Downloads\\Komponentowo\\Komponentowo\\Models\\TaskItem.cs",
+              "RelativeToolTip": "Komponentowo\\Models\\TaskItem.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAwwDsAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T19:34:00.163Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TaskListComponent.cs",
+              "DocumentMoniker": "C:\\Users\\adrian\\Downloads\\Komponentowo\\Komponentowo\\Components\\TaskListComponent.cs",
+              "RelativeDocumentMoniker": "Komponentowo\\Components\\TaskListComponent.cs",
+              "ToolTip": "C:\\Users\\adrian\\Downloads\\Komponentowo\\Komponentowo\\Components\\TaskListComponent.cs",
+              "RelativeToolTip": "Komponentowo\\Components\\TaskListComponent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T19:20:01.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TaskDetailComponent.cs",
+              "DocumentMoniker": "C:\\Users\\adrian\\Downloads\\Komponentowo\\Komponentowo\\Components\\TaskDetailComponent.cs",
+              "RelativeDocumentMoniker": "Komponentowo\\Components\\TaskDetailComponent.cs",
+              "ToolTip": "C:\\Users\\adrian\\Downloads\\Komponentowo\\Komponentowo\\Components\\TaskDetailComponent.cs",
+              "RelativeToolTip": "Komponentowo\\Components\\TaskDetailComponent.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAAwG0AAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T19:19:42.281Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StatsComponent.cs",
+              "DocumentMoniker": "C:\\Users\\adrian\\Downloads\\Komponentowo\\Komponentowo\\Components\\StatsComponent.cs",
+              "RelativeDocumentMoniker": "Komponentowo\\Components\\StatsComponent.cs",
+              "ToolTip": "C:\\Users\\adrian\\Downloads\\Komponentowo\\Komponentowo\\Components\\StatsComponent.cs",
+              "RelativeToolTip": "Komponentowo\\Components\\StatsComponent.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAuwFUAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T19:16:38.02Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 37,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

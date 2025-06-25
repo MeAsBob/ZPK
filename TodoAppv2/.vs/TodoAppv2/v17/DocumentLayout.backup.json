@@ -1,0 +1,151 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\adrian\\Downloads\\TodoAppv2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0C0712DB-9EEC-4E3C-9281-7B00D723076F}|TodoAppv2\\TodoAppv2.csproj|c:\\users\\adrian\\downloads\\todoappv2\\todoappv2\\pages\\stats.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0C0712DB-9EEC-4E3C-9281-7B00D723076F}|TodoAppv2\\TodoAppv2.csproj|solutionrelative:todoappv2\\pages\\stats.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C0712DB-9EEC-4E3C-9281-7B00D723076F}|TodoAppv2\\TodoAppv2.csproj|c:\\users\\adrian\\downloads\\todoappv2\\todoappv2\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0C0712DB-9EEC-4E3C-9281-7B00D723076F}|TodoAppv2\\TodoAppv2.csproj|solutionrelative:todoappv2\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C0712DB-9EEC-4E3C-9281-7B00D723076F}|TodoAppv2\\TodoAppv2.csproj|c:\\users\\adrian\\downloads\\todoappv2\\todoappv2\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0C0712DB-9EEC-4E3C-9281-7B00D723076F}|TodoAppv2\\TodoAppv2.csproj|solutionrelative:todoappv2\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C0712DB-9EEC-4E3C-9281-7B00D723076F}|TodoAppv2\\TodoAppv2.csproj|c:\\users\\adrian\\downloads\\todoappv2\\todoappv2\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{0C0712DB-9EEC-4E3C-9281-7B00D723076F}|TodoAppv2\\TodoAppv2.csproj|solutionrelative:todoappv2\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C0712DB-9EEC-4E3C-9281-7B00D723076F}|TodoAppv2\\TodoAppv2.csproj|c:\\users\\adrian\\downloads\\todoappv2\\todoappv2\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C0712DB-9EEC-4E3C-9281-7B00D723076F}|TodoAppv2\\TodoAppv2.csproj|solutionrelative:todoappv2\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C0712DB-9EEC-4E3C-9281-7B00D723076F}|TodoAppv2\\TodoAppv2.csproj|c:\\users\\adrian\\downloads\\todoappv2\\todoappv2\\pages\\stats.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C0712DB-9EEC-4E3C-9281-7B00D723076F}|TodoAppv2\\TodoAppv2.csproj|solutionrelative:todoappv2\\pages\\stats.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C0712DB-9EEC-4E3C-9281-7B00D723076F}|TodoAppv2\\TodoAppv2.csproj|c:\\users\\adrian\\downloads\\todoappv2\\todoappv2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C0712DB-9EEC-4E3C-9281-7B00D723076F}|TodoAppv2\\TodoAppv2.csproj|solutionrelative:todoappv2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\adrian\\Downloads\\TodoAppv2\\TodoAppv2\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "TodoAppv2\\Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\adrian\\Downloads\\TodoAppv2\\TodoAppv2\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "TodoAppv2\\Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-22T09:27:07.528Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\adrian\\Downloads\\TodoAppv2\\TodoAppv2\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "TodoAppv2\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\adrian\\Downloads\\TodoAppv2\\TodoAppv2\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "TodoAppv2\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAgwJgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-27T18:00:25.405Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\adrian\\Downloads\\TodoAppv2\\TodoAppv2\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "TodoAppv2\\Pages\\Index.cshtml",
+              "ToolTip": "C:\\Users\\adrian\\Downloads\\TodoAppv2\\TodoAppv2\\Pages\\Index.cshtml",
+              "RelativeToolTip": "TodoAppv2\\Pages\\Index.cshtml",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAGMAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-27T18:03:30.504Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\adrian\\Downloads\\TodoAppv2\\TodoAppv2\\Pages\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "TodoAppv2\\Pages\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\adrian\\Downloads\\TodoAppv2\\TodoAppv2\\Pages\\Index.cshtml.cs",
+              "RelativeToolTip": "TodoAppv2\\Pages\\Index.cshtml.cs",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAkwJYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T18:45:48.652Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Stats.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\adrian\\Downloads\\TodoAppv2\\TodoAppv2\\Pages\\Stats.cshtml.cs",
+              "RelativeDocumentMoniker": "TodoAppv2\\Pages\\Stats.cshtml.cs",
+              "ToolTip": "C:\\Users\\adrian\\Downloads\\TodoAppv2\\TodoAppv2\\Pages\\Stats.cshtml.cs",
+              "RelativeToolTip": "TodoAppv2\\Pages\\Stats.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBMAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T13:29:09.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\adrian\\Downloads\\TodoAppv2\\TodoAppv2\\Program.cs",
+              "RelativeDocumentMoniker": "TodoAppv2\\Program.cs",
+              "ToolTip": "C:\\Users\\adrian\\Downloads\\TodoAppv2\\TodoAppv2\\Program.cs",
+              "RelativeToolTip": "TodoAppv2\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T13:33:23.143Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Stats.cshtml",
+              "DocumentMoniker": "C:\\Users\\adrian\\Downloads\\TodoAppv2\\TodoAppv2\\Pages\\Stats.cshtml",
+              "RelativeDocumentMoniker": "TodoAppv2\\Pages\\Stats.cshtml",
+              "ToolTip": "C:\\Users\\adrian\\Downloads\\TodoAppv2\\TodoAppv2\\Pages\\Stats.cshtml",
+              "RelativeToolTip": "TodoAppv2\\Pages\\Stats.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-28T06:36:43.5Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 37,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

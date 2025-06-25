@@ -1,0 +1,30 @@
+﻿@page
+@model StatsModel
+@{
+    ViewData["Title"] = "Statystyki zadań";
+}
+<div class="container-apk">
+    <!-- Header -->
+
+    <div class="row-apk nav-apk">
+        <div class="column-apk">
+            <h1>Statystyki</h1>
+        </div>
+    </div>
+
+    <!-- Zrobione -->
+
+    <div class="row-apk">
+        <div class="column-apk content-apk">
+            <h2>Liczba zadań <strong>zrobionych</strong>: @Model.DoneCount</h2>
+        </div>
+    </div>
+
+    <!-- Do zrobienia -->
+
+    <div class="row-apk ostatni">
+        <div class="column-apk content-apk">
+            <h2>Liczba zadań <strong>do zrobienia</strong>: @Model.TodoCount</h2>
+        </div>
+    </div>
+</div>

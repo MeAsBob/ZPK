@@ -1,0 +1,132 @@
+﻿@page
+@model Komponentowo.Pages.IndexModel
+@{
+    ViewData["Title"] = "Lista zadań";
+}
+<div class="container-apk">
+    <!-- Header -->
+
+    <div class="row-apk nav-apk">
+        <div class="column-apk">
+            <h1>Lista zadań</h1>
+        </div>
+    </div>
+
+    <!-- Dodawanie nowego zadania -->
+    <div class="row-apk">
+        <div class="column-apk content-apk">
+            <h2>Dodaj nowe zadanie</h2>
+            <form method="post">
+                <div class="mb-3">
+                    <label>Szablony nazw:</label>
+                    <button type="button" class="btn btn-sm btn-outline-secondary me-1" onclick="insertTemplate('Zrobić sprawozdanie do ...')">Zrobić sprawozdanie do ...</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary me-1" onclick="insertTemplate('Kupić ...')">Kupić ...</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="insertTemplate('Zadzwonić do ...')">Zadzwonić do ...</button>
+                </div>
+                <div class="mb-3">
+                    <label for="NewTaskTitle">Tytuł:</label>
+                    <input type="text" id="NewTaskTitle" name="NewTaskTitle" value="@Model.DraftTask?.Title" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label for="NewTaskPriority">Priorytet:</label>
+                    @{
+                        int selectedPriority = Model.DraftTask?.Priority ?? 3;
+                    }
+                    <select id="NewTaskPriority" name="NewTaskPriority" class="form-control">
+                        <option value="1" selected="@(selectedPriority == 1)">1</option>
+                        <option value="2" selected="@(selectedPriority == 2)">2</option>
+                        <option value="3" selected="@(selectedPriority == 3)">3</option>
+                        <option value="4" selected="@(selectedPriority == 4)">4</option>
+                        <option value="5" selected="@(selectedPriority == 5)">5</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="NewTaskCategory">Kategoria:</label>
+                    @{
+                        string selectedCategory = "";
+                        if (Model.DraftTask != null)
+                        {
+                            selectedCategory = Model.DraftTask.Category ?? "";
+                        }
+                    }
+                    <select id="NewTaskCategory" name="NewTaskCategory" class="form-control">
+                        <option value="" selected="@(selectedCategory == "")">(wybierz)</option>
+                        <option value="studia" selected="@(selectedCategory == "studia")">studia</option>
+                        <option value="dom" selected="@(selectedCategory == "dom")">dom</option>
+                        <option value="praca" selected="@(selectedCategory == "praca")">praca</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="NewTaskDeadline">Termin:</label>
+                    <input type="date" id="NewTaskDeadline" name="NewTaskDeadline" class="form-control"
+                           value="@(Model.DraftTask?.Deadline != DateTime.MinValue ? Model.DraftTask.Deadline.ToString("yyyy-MM-dd") : "")" />
+                </div>
+                <button type="submit" asp-page-handler="Add" class="btn btn-success">Dodaj</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const input = document.getElementById('NewTaskTitle');
+        input?.addEventListener('input', () => {
+            fetch("?handler=SaveDraft", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "RequestVerificationToken": document.querySelector("input[name='__RequestVerificationToken']").value
+                },
+                body: JSON.stringify({ Id: 0, Title: input.value, IsCompleted: false })
+            });
+        });
+        function insertTemplate(text) {
+            const input = document.getElementById('NewTaskTitle');
+            if (input) {
+                input.value = text;
+                input.dispatchEvent(new Event('input'));
+                input.focus();
+            }
+        }
+    </script>
+
+<!-- LISTA ZADAŃ -->
+<div class="row-apk" id="wyswietlanie">
+        <div class="column-apk content-apk ostatni">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Tytuł</th>
+                    <th>Kategoria</th>
+                    <th>Priorytet</th>
+                    <th>Termin</th>
+                    <th>Status</th>
+                    <th>Akcje</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var task in Model.Tasks)
+                {
+                    <tr style="@(task.IsCompleted ? "text-decoration: line-through;" : "")">
+                        <td>@task.Title</td>
+                        <td>@(string.IsNullOrEmpty(task.Category) ? "—" : task.Category)</td>
+                        <td>@task.Priority</td>
+                        <td>@(task.Deadline != DateTime.MinValue ? task.Deadline.ToString("yyyy-MM-dd") : "—")</td>
+                        <td>@(task.IsCompleted ? "✔️" : "—")</td>
+                        <td>
+                            <form method="post" style="display:inline">
+                                <input type="hidden" name="TaskId" value="@task.Id" />
+                                <button type="submit" asp-page-handler="Toggle" class="btn btn-sm btn-warning">
+                                    @(task.IsCompleted ? "Cofnij" : "Ukończ")
+                                </button>
+                            </form>
+                            <form method="post" style="display:inline">
+                                <input type="hidden" name="TaskId" value="@task.Id" />
+                                <button type="submit" asp-page-handler="Delete" class="btn btn-sm btn-danger">Usuń</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        </div>
+    </div>
+</div>

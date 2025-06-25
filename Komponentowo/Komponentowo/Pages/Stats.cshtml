@@ -1,0 +1,38 @@
+﻿@page
+@model Komponentowo.Pages.StatsModel
+@{
+    ViewData["Title"] = "Statystyki";
+}
+<div class="container-apk" style="background-color:@Model.StatsBackgroundColor;">
+    <!-- Header -->
+
+    <div class="row-apk nav-apk">
+        <div class="column-apk">
+            <h1>Statystyki</h1>
+        </div>
+    </div>
+
+    <!-- Zrobione -->
+
+    <div class="row-apk">
+        <div class="column-apk content-apk">
+            <ul>
+                <li>Wszystkich zadań: @Model.TotalTasks</li>
+                <li>Ukończonych: @Model.CompletedTasks</li>
+                <li>Postęp: @Model.CompletionPercent %</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Zmiana koloru -->
+
+    <div class="row-apk ostatni">
+        <div class="column-apk content-apk">
+            <form method="post">
+                <label for="NewColor">Zmień kolor tła:</label>
+                <input type="color" id="NewColor" name="NewColor" value="@Model.StatsBackgroundColor" />
+                <button type="submit" asp-page-handler="ChangeColor" class="btn btn-secondary mt-2">Zapisz kolor</button>
+            </form>
+        </div>
+    </div>
+</div>

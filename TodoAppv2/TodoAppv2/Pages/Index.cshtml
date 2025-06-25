@@ -1,0 +1,191 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Lista zadań";
+}
+<div class="container-apk">
+    <!-- Header -->
+
+    <div class="row-apk nav-apk">
+        <div class="column-apk">
+            <h1>Lista zadań</h1>
+        </div>
+    </div>
+
+    <!-- Sekcja filtrowania -->
+
+    <div class="row-apk">
+        <div class="column-apk content-apk">
+            <h2>Filtrowanie</h2>
+            <form method="get" class="mb-3 form-content">
+                <div class="row align-items-end">
+                    <div class="col-auto">
+                        <label for="search" class="form-label">Wyszukaj zadanie:</label>
+                        <input name="SearchTerm" id="search" class="form-control" type="text"
+                               value="@Model.SearchTerm" placeholder="Wprowadź nazwę..." />
+                    </div>
+                    <div class="col-auto">
+                        <label for="status" class="form-label">Status:</label>
+                        <select name="StatusFilter" id="status" class="form-select">
+                            <option value="all" selected="@(string.IsNullOrEmpty(Model.StatusFilter) || Model.StatusFilter == "all" ? "selected" : null)">Wszystkie</option>
+                            <option value="todo" selected="@(Model.StatusFilter == "todo" ? "selected" : null)">Do zrobienia</option>
+                            <option value="done" selected="@(Model.StatusFilter == "done" ? "selected" : null)">Zrobione</option>
+                        </select>
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-primary">Filtruj</button>
+                        <a asp-page="/Index" class="btn btn-secondary">Wyczyść filtr</a>
+                    </div>
+                    <div class="col-auto">
+                        <button type="button" class="btn btn-success mt-3 dodaj-zadanie" data-bs-toggle="modal" data-bs-target="#addTaskModal">+ Dodaj nowe zadanie</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Tabela z listą zadań -->
+
+    <div class="row-apk" id="wyswietlanie">
+        <div class="column-apk content-apk">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Nazwa zadania</th>
+                        <th>Termin</th>
+                        <th>Ważność</th>
+                        <th>Status</th>
+                        <th>Akcje</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var task in Model.Tasks)
+                    {
+                        <tr>
+                            <td>@task.Name</td>
+                            <td>@(task.Deadline.HasValue ? task.Deadline.Value.ToString("yyyy-MM-dd") : "-")</td>
+                            <td>@task.Priority</td>
+                            <td>
+                                @if (task.IsDone)
+                                {
+                                    <span class="text-success">Zrobione</span>
+                                }
+                                else
+                                {
+                                    <span class="text-warning">Do zrobienia</span>
+                                }
+                            </td>
+                            <td>
+                                @if (!task.IsDone)
+                                {
+                                    <form method="post" asp-page-handler="Complete" class="d-inline">
+                                        <input type="hidden" name="id" value="@task.Id" />
+                                        <button type="submit" class="btn btn-success btn-sm">Oznacz jako zrobione</button>
+                                    </form>
+                                }
+                                <form method="post" asp-page-handler="Delete" class="d-inline" onsubmit="return confirm('Czy na pewno chcesz usunąć to zadanie?');">
+                                    <input type="hidden" name="id" value="@task.Id" />
+                                    <button type="submit" class="btn btn-danger btn-sm">Usuń</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Paginacja -->
+    <div class="row-apk" id="wyswietlanie">
+        <div class="column-apk ostatni">
+            @if (Model.TotalPages > 1)
+            {
+                <nav aria-label="Stronicowanie">
+                    <ul class="pagination">
+                        @if (Model.PageIndex > 1)
+                        {
+                            <li class="page-item">
+                                <a class="page-link" asp-page="/Index"
+                                    asp-route-SearchTerm="@Model.SearchTerm"
+                                    asp-route-StatusFilter="@Model.StatusFilter"
+                                    asp-route-PageIndex="@(Model.PageIndex - 1)">« Poprzednia</a>
+                            </li>
+                        }
+                        @for (int p = 1; p <= Model.TotalPages; p++)
+                        {
+                            <li class="page-item @(p == Model.PageIndex ? "active" : "")">
+                                <a class="page-link" asp-page="/Index"
+                                    asp-route-SearchTerm="@Model.SearchTerm"
+                                    asp-route-StatusFilter="@Model.StatusFilter"
+                                    asp-route-PageIndex="@p">@p</a>
+                            </li>
+                        }
+                        @if (Model.PageIndex < Model.TotalPages)
+                        {
+                            <li class="page-item">
+                                <a class="page-link" asp-page="/Index"
+                                    asp-route-SearchTerm="@Model.SearchTerm"
+                                    asp-route-StatusFilter="@Model.StatusFilter"
+                                    asp-route-PageIndex="@(Model.PageIndex + 1)">Następna »</a>
+                            </li>
+                        }
+                    </ul>
+                </nav>
+            }
+        </div>
+    </div>
+
+    <!-- Formularz dodawania zadania - POPUP -->
+
+    <div class="modal fade" id="addTaskModal" tabindex="-1" aria-labelledby="addTaskLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <form method="post" asp-page-handler="Add">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addTaskLabel">Dodaj zadanie</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zamknij"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label asp-for="NewTask.Name" class="form-label"></label>
+                            <input asp-for="NewTask.Name" class="form-control" />
+                            <span asp-validation-for="NewTask.Name" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="NewTask.Deadline" class="form-label"></label>
+                            <input asp-for="NewTask.Deadline" type="date" class="form-control" />
+                            <span asp-validation-for="NewTask.Deadline" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="NewTask.Priority" class="form-label"></label>
+                            <select asp-for="NewTask.Priority" class="form-select">
+                                <option value="">-- Wybierz priorytet --</option>
+                                <option value="1">1 - niski</option>
+                                <option value="2">2</option>
+                                <option value="3">3 - średni</option>
+                                <option value="4">4</option>
+                                <option value="5">5 - wysoki</option>
+                            </select>
+                            <span asp-validation-for="NewTask.Priority" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Anuluj</button>
+                        <button type="submit" class="btn btn-primary">Dodaj</button>
+                    </div>
+
+                    <partial name="_ValidationScriptsPartial" />
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
